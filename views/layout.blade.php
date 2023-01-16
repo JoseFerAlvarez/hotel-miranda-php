@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @section('head')
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <link href="/css/styles.css" rel="stylesheet">
+        <title>Document</title>
+    @show
+</head>
+
+<body>
+    @section('topbar')
+        <nav class="topbar">
+            <div class="topbar__container">
+                <div class="topbar__container__images">
+                    <div class="burger__container">
+                        <img class="burger burger--open" src="./src/assets/icons/burger.svg">
+                    </div>
+                    <div class="logo">
+                        <div class="logo__back">
+                            <p class="logo__letter">H</p>
+                        </div>
+                        <img class="logo__wordmark" src="./src/assets/icons/wordmark.svg">
+                    </div>
+                </div>
+                <div class="topbar__nav--desktop">
+                    <ul class="topbar__nav__list">
+                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./about-us.html">About
+                                Us</a></li>
+                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./room-grid.html">Rooms</a>
+                        </li>
+                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
+                                href="./room-offers.html">Offers</a></li>
+                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./details.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="topbar__container__buttons">
+                    <button class="icon-button"><img src="./src/assets/icons/user.svg"></button>
+                    <button class="icon-button"><img src="./src/assets/icons/search.svg"></button>
+                </div>
+            </div>
+            <div class="topbar__nav">
+                <ul class="topbar__nav__list">
+                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./about-us.html">About
+                            Us</a></li>
+                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./room-grid.html">Rooms</a>
+                    </li>
+                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./room-offers.html">Offers</a>
+                    </li>
+                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./details.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    @show
+
+    @section('topbarback')
+        <div class="header__back"></div>
+    @show
+
+    @section('index-content')
+    @show
+
+    @section('about-content')
+    @show
+
+    @section('room-grid-content')
+    @show
+
+    @section('room-list-content')
+    @show
+
+    @section('room-details-content')
+    @show
+
+    @section('room-offers-content')
+    @show
+
+    @section('details-content')
+    @show
+
+    @section('footer')
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__description">
+                    <div class="logo logo--golden">
+                        <div class="logo__back logo--golden__back">
+                            <p class="logo__letter logo--golden__letter">H</p>
+                        </div>
+                        <img class="logo--golden__wordmark" src="./src/assets/icons/wordmark.svg">
+                    </div>
+                    <p class="footer__description__text">Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed
+                        doing
+                        eius mod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
+                    </p>
+                    <div class="footer__description__social-media">
+                        <a href="#" class="social-media-link"><img class="social-media-link__icon"
+                                src="./src/assets/icons/facebook.svg"></a>
+                        <a href="#" class="social-media-link"><img class="social-media-link__icon"
+                                src="./src/assets/icons/twitter.svg"></a>
+                        <a href="#" class="social-media-link"><img class="social-media-link__icon"
+                                src="./src/assets/icons/behance.svg"></a>
+                        <a href="#" class="social-media-link"><img class="social-media-link__icon"
+                                src="./src/assets/icons/linkedin.svg"></a>
+                        <a href="#" class="social-media-link"><img class="social-media-link__icon"
+                                src="./src/assets/icons/youtube.svg"></a>
+                    </div>
+                </div>
+
+                <div class="footer__services">
+                    <p class="footer__services__title">Services.</p>
+
+                    <div class="footer__services__container">
+                        <div class="footer__services__column">
+                            <p class="footer__services__text">+ Resturent & Bar</p>
+                            <p class="footer__services__text">+ Swimming Pool</p>
+                            <p class="footer__services__text">+ Wellness & Spa</p>
+                            <p class="footer__services__text">+ Restaurant</p>
+                            <p class="footer__services__text">+ Conference Room</p>
+                            <p class="footer__services__text">+ Coctail Party House</p>
+                        </div>
+                        <div class="footer__services__column">
+                            <p class="footer__services__text">+ Gaming Zone</p>
+                            <p class="footer__services__text">+ Marrige Party</p>
+                            <p class="footer__services__text">+ Party Planning</p>
+                            <p class="footer__services__text">+ Tour Consultancy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__contact">
+                    <p class="footer__contact__title">Contact us.</p>
+
+                    <div class="footer__contact__container">
+                        <img class="footer__contact__img" src="./src/assets/icons/phone.svg">
+                        <div class="footer__contact__data">
+                            <p class="footer__contact__data__title">Phone number</p>
+                            <p class="footer__contact__data__text">+987 876 765 76 577</p>
+                        </div>
+                    </div>
+
+                    <div class="footer__contact__container">
+                        <img class="footer__contact__img" src="./src/assets/images/hotel-address.png">
+                        <div class="footer__contact__data">
+                            <p class="footer__contact__data__title">Phone number</p>
+                            <p class="footer__contact__data__text">+987 876 765 76 577</p>
+                        </div>
+                    </div>
+
+                    <div class="footer__contact__container">
+                        <img class="footer__contact__img" src="./src/assets/images/email.png">
+                        <div class="footer__contact__data">
+                            <p class="footer__contact__data__title">Phone number</p>
+                            <p class="footer__contact__data__text">+987 876 765 76 577</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <p class="footer__copyright__copy footer__copyright__text">Copyright By@Example - 2020</p>
+                <div class="footer__copyright__links">
+                    <a class="footer__copyright__text footer__copyright__link" href="#">Terms of use</a>
+                    <p class="footer__copyright__text">|</p>
+                    <a class="footer__copyright__text footer__copyright__link" href="#">Privacy Environmental
+                        Policy</a>
+                </div>
+            </div>
+        </footer>
+    @show
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+@extends('layout')
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @section('head')
+        @parent
+    @endsection
+</head>
+
+<body>
+    @section('topbar')
+        @parent
+    @endsection
+
+    @section('topbarback')
+        @parent
+    @endsection
+
+    @section('about-content')
+        <header class="header">
+            <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
+            <p class="title header__text__title">About Us</p>
+            <div class="header__links">
+                <a href="./index.html">Home</a>
+                <span>|</span>
+                <a class="topbar__nav__anchor__a" href="#">About</a>
+            </div>
+        </header>
+
+        <section class="about-us__description">
+            <div class="about-us__description__video__container">
+                <video class="about-us__description__video" controls>
+                    <source src="./src/assets/videos/luxury-hotel.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p class="about-us__description__text">Hello. Our hotel has been present for over 20 years. We make the best
+                for all our customers.</p>
+
+            <div class="about-us__description__advantages">
+                <div class="about-us__description__advantage">
+                    <img class="about-us__description__advantage__img" src="./src/assets/images/breakfast.png">
+                    <p class="about-us__description__advantage__text">BREAKFAST</p>
+                </div>
+
+                <div class="about-us__description__advantage">
+                    <img class="about-us__description__advantage__img about-us__description__advantage__img__plane"
+                        src="./src/assets/images/plane.png">
+                    <p class="about-us__description__advantage__text">AIRPORT PICKUP</p>
+                </div>
+
+                <div class="about-us__description__advantage">
+                    <img class="about-us__description__advantage__img" src="./src/assets/icons/city-location.svg">
+                    <p class="about-us__description__advantage__text">CITY GUIDE</p>
+                </div>
+
+                <div class="about-us__description__advantage about-us__description__advantage__barbecue">
+                    <img class="about-us__description__advantage__img" src="./src/assets/images/barbecue.png">
+                    <p class="about-us__description__advantage__text">BBQ PARTY</p>
+                </div>
+
+                <div class="about-us__description__advantage">
+                    <img class="about-us__description__advantage__img" src="./src/assets/icons/room.svg">
+                    <p class="about-us__description__advantage__text">LUXURY ROOM</p>
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <div class="restaurant__img__container">
+                    <img class="restaurant__img" src="./src/assets/images/restaurant.jpg">
+                </div>
+                <div class="restaurant__text">
+                    <p class="subtitle restaurant__subtitle">RESTAURANT</p>
+                    <p class="title restaurant__title">Get Restaurant Facilities & Many Other More</p>
+                    <p class="text-archivo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem por
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip.</p>
+                    <button class="button button-golden restaurant__button">TAKE A TOUR</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="core-features core-features--dark">
+
+            <p class="subtitle subtitle--white core-features__subtitle">FACILITIES</p>
+            <p class="title title--white core-features__title">Core Features</p>
+
+            <div class="swiper-feature">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="feature feature--black">
+                            <img class="feature__img-foreground" src="./src/assets/images/rating.png">
+                            <div class="feature__img-background feature__img-background--black">01</div>
+                            <p class="feature__title feature__title--white">Have High Rating</p>
+                            <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="feature feature--black">
+                            <img class="feature__img-foreground" src="./src/assets/images/clock.png">
+                            <div class="feature__img-background feature__img-background--black">02</div>
+                            <p class="feature__title feature__title--white">Quiet Hours</p>
+                            <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feature feature--black">
+                            <img class="feature__img-foreground" src="./src/assets/icons/location.svg">
+                            <div class="feature__img-background feature__img-background--black">03</div>
+                            <p class="feature__title feature__title--white">Best Locations</p>
+                            <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feature feature--black">
+                            <img class="feature__img-foreground" src="./src/assets/images/clock-cancel.png">
+                            <div class="feature__img-background feature__img-background--black">04</div>
+                            <p class="feature__title feature__title--white">Free Cancellation</p>
+                            <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feature feature--black">
+                            <img class="feature__img-foreground" src="./src/assets/icons/payment.svg">
+                            <div class="feature__img-background feature__img-background--black">05</div>
+                            <p class="feature__title feature__title--white">Payment Options</p>
+                            <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feature feature--black">
+                            <img class="feature__img-foreground" src="./src/assets/icons/offer.svg">
+                            <div class="feature__img-background feature__img-background--black">06</div>
+                            <p class="feature__title feature__title--white">Special Offers</p>
+                            <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swipper-feature__pagination"></div>
+            </div>
+
+            <div class="core-features__grid">
+                <div class="feature feature--black">
+                    <img class="feature__img-foreground" src="./src/assets/images/rating.png">
+                    <div class="feature__img-background feature__img-background--black">01</div>
+                    <p class="feature__title feature__title--white">Have High Rating</p>
+                    <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna..</p>
+                </div>
+                <div class="feature feature--black">
+                    <img class="feature__img-foreground" src="./src/assets/images/clock.png">
+                    <div class="feature__img-background feature__img-background--black">02</div>
+                    <p class="feature__title feature__title--white">Quiet Hours</p>
+                    <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna..</p>
+                </div>
+                <div class="feature feature--black">
+                    <img class="feature__img-foreground" src="./src/assets/icons/location.svg">
+                    <div class="feature__img-background feature__img-background--black">03</div>
+                    <p class="feature__title feature__title--white">Best Locations</p>
+                    <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna..</p>
+                </div>
+                <div class="feature feature--black">
+                    <img class="feature__img-foreground" src="./src/assets/images/clock-cancel.png">
+                    <div class="feature__img-background feature__img-background--black">04</div>
+                    <p class="feature__title feature__title--white">Free Cancellation</p>
+                    <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna..</p>
+                </div>
+                <div class="feature feature--black">
+                    <img class="feature__img-foreground" src="./src/assets/icons/payment.svg">
+                    <div class="feature__img-background feature__img-background--black">05</div>
+                    <p class="feature__title feature__title--white">Payment Options</p>
+                    <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna..</p>
+                </div>
+                <div class="feature feature--black">
+                    <img class="feature__img-foreground" src="./src/assets/icons/offer.svg">
+                    <div class="feature__img-background feature__img-background--black">06</div>
+                    <p class="feature__title feature__title--white">Special Offers</p>
+                    <p class="text-archivo text-archivo--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna..</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us__counter">
+            <p class="subtitle">COUNTER</p>
+            <p class="title">Some Fun Facts</p>
+            <div class="about-us__counter__feature__container">
+                <div class="about-us__counter__feature">
+                    <img class="about-us__counter__feature__img" src="./src/assets/icons/likes.svg">
+                    <div class="about-us__counter__feature__fact">
+                        <p class="about-us__counter__feature__fact__number">8000</p>
+                        <p class="about-us__counter__feature__fact__description">Happy Users</p>
+                    </div>
+                    <img class="about-us__counter__feature__arrow" src="./src/assets/icons/arrow.svg">
+                </div>
+                <div class="about-us__counter__feature">
+                    <img class="about-us__counter__feature__img" src="./src/assets/icons/reviews.svg">
+                    <div class="about-us__counter__feature__fact">
+                        <p class="about-us__counter__feature__fact__number">10M</p>
+                        <p class="about-us__counter__feature__fact__description">Reviews & Appriciate</p>
+                    </div>
+                    <img class="about-us__counter__feature__arrow" src="./src/assets/icons/arrow.svg">
+                </div>
+                <div class="about-us__counter__feature">
+                    <img class="about-us__counter__feature__img" src="./src/assets/icons/coverage.svg">
+                    <div class="about-us__counter__feature__fact">
+                        <p class="about-us__counter__feature__fact__number">100</p>
+                        <p class="about-us__counter__feature__fact__description">Country Coverage</p>
+                    </div>
+                    <img class="about-us__counter__feature__arrow" src="./src/assets/icons/arrow.svg">
+                </div>
+            </div>
+
+            <div class="swiper-counter">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./src/assets/images/feature1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./src/assets/images/feature2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./src/assets/images/feature3.jpg">
+                    </div>
+                </div>
+                <div class="swiper-counter__pagination"></div>
+            </div>
+
+            <div class="about-us__counter__images">
+                <img src="./src/assets/images/feature1.jpg">
+                <img src="./src/assets/images/feature2.jpg">
+            </div>
+        </section>
+    @endsection
+
+    @section('footer')
+        @parent
+    @endsection
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
+    <script type="module" src="./src/js/slidersAboutUs.js"></script>
+</body>
+
+</html>
