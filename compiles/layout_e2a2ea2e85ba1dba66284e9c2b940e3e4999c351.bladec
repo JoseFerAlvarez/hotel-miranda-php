@@ -7,7 +7,7 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
- <link href="/css/styles.css" rel="stylesheet">
+ <link href="/src/css/styles.css" rel="stylesheet">
  <title>Document</title>
  <?php echo $this->yieldSection(); ?>
 </head>
@@ -29,13 +29,13 @@
  </div>
  <div class="topbar__nav--desktop">
  <ul class="topbar__nav__list">
- <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./about-us.html">About
+ <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/about-us.php">About
  Us</a></li>
- <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./room-grid.html">Rooms</a>
+ <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/room-grid.php">Rooms</a>
  </li>
- <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
- href="./room-offers.html">Offers</a></li>
- <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./details.html">Contact</a>
+ <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/room-offers.php">Offers</a>
+ </li>
+ <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/details.php">Contact</a>
  </li>
  </ul>
  </div>
@@ -46,13 +46,13 @@
  </div>
  <div class="topbar__nav">
  <ul class="topbar__nav__list">
- <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./about-us.html">About
+ <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/about-us.php">About
  Us</a></li>
- <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./room-grid.html">Rooms</a>
+ <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/room-grid.php">Rooms</a>
  </li>
- <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./room-offers.html">Offers</a>
+ <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/room-offers.php">Offers</a>
  </li>
- <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="./details.html">Contact</a>
+ <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/details.php">Contact</a>
  </li>
  </ul>
  </div>

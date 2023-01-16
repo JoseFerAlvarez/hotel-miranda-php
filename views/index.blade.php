@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     @section('topbar')
         @parent
     @endsection
@@ -90,105 +89,42 @@
             <div class="swiper">
                 <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="room">
-                            <div class="room__container">
-                                <div class="room__rules">
-                                    <img class="room__rules__icon" src="./src/assets/icons/bed.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/wifi.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/automobile.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/snow.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/dumbbell.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/smoke.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/cup.svg">
+                    @for ($i = 0; $i < 3; $i++)
+                        <div class="swiper-slide">
+                            <div class="room">
+                                <div class="room__container">
+                                    <div class="room__rules">
+                                        <img class="room__rules__icon" src="./src/assets/icons/bed.svg">
+                                        <img class="room__rules__icon" src="./src/assets/icons/wifi.svg">
+                                        <img class="room__rules__icon" src="./src/assets/icons/automobile.svg">
+                                        <img class="room__rules__icon" src="./src/assets/icons/snow.svg">
+                                        <img class="room__rules__icon" src="./src/assets/icons/dumbbell.svg">
+                                        <img class="room__rules__icon" src="./src/assets/icons/smoke.svg">
+                                        <img class="room__rules__icon" src="./src/assets/icons/cup.svg">
+                                    </div>
+                                    <div class="room__img" style="background-image: url('{{ $rooms[$i][2] }}')">
+                                    </div>
                                 </div>
-                                <div class="room__img" style="background-image: url('./src/assets/images/room1.jpg')">
-                                </div>
-                            </div>
-                            <div class="room__data">
-                                <div class="room__data__text">
-                                    <p class="room__data__text__title">Minimal Duplex Room</p>
-                                    <p class="text-roboto text-roboto--grey room__data__text__description">Lorem ipsum
-                                        dolor
-                                        sit amet,
-                                        consectetur
-                                        adipisicing
-                                        elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                                </div>
-                                <div class="room__data__properties">
-                                    <p class="room__data__properties__price">$375<span
-                                            class="room__data__properties__price__night">/Night</span></p>
+                                <div class="room__data">
+                                    <div class="room__data__text">
+                                        <p class="room__data__text__title">Minimal Duplex Room</p>
+                                        <p class="text-roboto text-roboto--grey room__data__text__description">Lorem ipsum
+                                            dolor
+                                            sit amet,
+                                            consectetur
+                                            adipisicing
+                                            elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                                    </div>
+                                    <div class="room__data__properties">
+                                        <p class="room__data__properties__price">{{ $rooms[$i][5] }}<span
+                                                class="room__data__properties__price__night">/Night</span></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endfor
 
-                    <div class="swiper-slide">
-                        <div class="room">
-                            <div class="room__container">
-                                <div class="room__rules">
-                                    <img class="room__rules__icon" src="./src/assets/icons/bed.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/wifi.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/automobile.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/snow.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/dumbbell.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/smoke.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/cup.svg">
-                                </div>
-                                <div class="room__img" style="background-image: url('./src/assets/images/room2.jpg')">
-                                </div>
-                            </div>
-                            <div class="room__data">
-                                <div class="room__data__text">
-                                    <p class="room__data__text__title">Minimal Duplex Room</p>
-                                    <p class="text-roboto text-roboto--grey room__data__text__description">Lorem ipsum
-                                        dolor
-                                        sit amet, consectetur
-                                        adipisicing
-                                        elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                                </div>
-                                <div class="room__data__properties">
-                                    <p class="room__data__properties__price">$375<span
-                                            class="room__data__properties__price__night">/Night</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="room">
-                            <div class="room__container">
-                                <div class="room__rules">
-                                    <img class="room__rules__icon" src="./src/assets/icons/bed.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/wifi.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/automobile.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/snow.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/dumbbell.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/smoke.svg">
-                                    <img class="room__rules__icon" src="./src/assets/icons/cup.svg">
-                                </div>
-                                <div class="room__img" style="background-image: url('./src/assets/images/room3.jpg')">
-                                </div>
-                            </div>
-                            <div class="room__data">
-                                <div class="room__data__text">
-                                    <p class="room__data__text__title">Minimal Duplex Room</p>
-                                    <p class="text-roboto text-roboto--grey room__data__text__description">Lorem ipsum
-                                        dolor
-                                        sit amet, consectetur
-                                        adipisicing
-                                        elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                                </div>
-                                <div class="room__data__properties">
-                                    <p class="room__data__properties__price">$375<span
-                                            class="room__data__properties__price__night">/Night</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="swiper__prev-element">></div>
