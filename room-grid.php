@@ -1,8 +1,14 @@
 <?php
+include "./src/db/db.php";
 require "vendor/autoload.php";
 
 use eftec\bladeone\BladeOne;
 
 $blade = new BladeOne();
 
-echo $blade->run("room-grid", []);
+$sql = "SELECT * FROM rooms;";
+$result = $conn->query($sql);
+
+echo $blade->run("room-grid", ["rooms" => $result->fetch_all()]);
+
+$conn->close();

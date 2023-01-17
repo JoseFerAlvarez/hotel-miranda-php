@@ -1699,9 +1699,7 @@
 }
 .room-amenities__service__image {
   width: 16px;
-}
-.room-amenities__service__image__wifi {
-  filter: invert(0.6) sepia(1);
+  filter: invert(0.5) sepia(1);
 }
 
 @media only screen and (min-width: 1000px) {

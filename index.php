@@ -6,7 +6,7 @@ use eftec\bladeone\BladeOne;
 
 $blade = new BladeOne();
 
-$sql = "SELECT * FROM rooms";
+$sql = "SELECT * FROM rooms;";
 $result = $conn->query($sql);
 
 echo $blade->run("index", ["rooms" => $result->fetch_all()]);

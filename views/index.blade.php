@@ -88,36 +88,32 @@
 
             <div class="swiper">
                 <div class="swiper-wrapper">
-
                     @for ($i = 0; $i < 3; $i++)
+                        {{ $number = rand(0, count($rooms) - 1) }}
                         <div class="swiper-slide">
                             <div class="room">
                                 <div class="room__container">
-                                    <div class="room__rules">
-                                        <img class="room__rules__icon" src="./src/assets/icons/bed.svg">
-                                        <img class="room__rules__icon" src="./src/assets/icons/wifi.svg">
-                                        <img class="room__rules__icon" src="./src/assets/icons/automobile.svg">
-                                        <img class="room__rules__icon" src="./src/assets/icons/snow.svg">
-                                        <img class="room__rules__icon" src="./src/assets/icons/dumbbell.svg">
-                                        <img class="room__rules__icon" src="./src/assets/icons/smoke.svg">
-                                        <img class="room__rules__icon" src="./src/assets/icons/cup.svg">
-                                    </div>
-                                    <div class="room__img" style="background-image: url('{{ $rooms[$i][2] }}')">
+                                    @if ($rooms[$number][4] != '')
+                                        <div class="room__rules">
+                                            @foreach (explode(',', $rooms[$number][4]) as $amenitie)
+                                                @if ($amenitie)
+                                                    <img class="room__rules__icon"
+                                                        src="/src/assets/bladeicons/{{ str_replace(' ', '', strtolower($amenitie)) }}.svg">
+                                                @endif
+                                            @endforeach
+                                        </div>
+                                    @endif
+                                    <div class="room__img" style="background-image: url('{{ $rooms[$number][2] }}')">
                                     </div>
                                 </div>
                                 <div class="room__data">
                                     <div class="room__data__text">
-                                        <p class="room__data__text__title">Minimal Duplex Room</p>
-                                        <p class="text-roboto text-roboto--grey room__data__text__description">Lorem ipsum
-                                            dolor
-                                            sit amet,
-                                            consectetur
-                                            adipisicing
-                                            elit,
-                                            sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                                        <p class="room__data__text__title">{{ $rooms[$number][3] }}</p>
+                                        <p class="text-roboto text-roboto--grey room__data__text__description">
+                                            {{ $rooms[$number][8] }}</p>
                                     </div>
                                     <div class="room__data__properties">
-                                        <p class="room__data__properties__price">{{ $rooms[$i][5] }}<span
+                                        <p class="room__data__properties__price">${{ $rooms[$number][5] / 100 }}<span
                                                 class="room__data__properties__price__night">/Night</span></p>
                                     </div>
                                 </div>
