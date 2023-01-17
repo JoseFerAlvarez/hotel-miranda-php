@@ -23,7 +23,7 @@
  <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
  <p class="title header__text__title">About Us</p>
  <div class="header__links">
- <a href="./index.html">Home</a>
+ <a href="/index.php">Home</a>
  <span>|</span>
  <a class="topbar__nav__anchor__a" href="#">About</a>
  </div>

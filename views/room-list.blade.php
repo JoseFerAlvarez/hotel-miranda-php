@@ -23,7 +23,7 @@
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">Ultimate Room</p>
             <div class="header__links">
-                <a href="./index.html">Home</a>
+                <a href="/index.php">Home</a>
                 <span>|</span>
                 <a class="topbar__nav__anchor__a" href="#">Rooms</a>
             </div>
@@ -74,7 +74,9 @@
         @parent
     @endsection
 
-    <script type="module" src="./src/js/index.js"></script>
+    @section('scripts')
+        <script type="module" src="./src/js/index.js"></script>
+    @endsection
 </body>
 
 </html>

@@ -175,6 +175,9 @@
  </div>
  </footer>
  <?php echo $this->yieldSection(); ?>
+
+ <?php $this->startSection('scripts'); ?>
+ <?php echo $this->yieldSection(); ?>
 </body>
 
 </html>

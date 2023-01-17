@@ -18,6 +18,8 @@ const puertaDelSol = {
 
 function initMap() {
 
+    console.log(document.getElementById("map"));
+
     /*Variable declaration*/
     map = new google.maps.Map(
         document.getElementById("map"),

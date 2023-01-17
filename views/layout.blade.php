@@ -175,6 +175,9 @@
             </div>
         </footer>
     @show
+
+    @section('scripts')
+    @show
 </body>
 
 </html>

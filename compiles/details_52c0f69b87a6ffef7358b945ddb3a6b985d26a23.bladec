@@ -23,7 +23,7 @@
  <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
  <p class="title header__text__title">New Details</p>
  <div class="header__links">
- <a href="./index.html">Home</a>
+ <a href="/index.php">Home</a>
  <span>|</span>
  <a href="#">Blog</a>
  </div>
@@ -139,6 +139,7 @@
  @parentXYZABC
  <?php $this->stopSection(); ?>
 
+ <?php $this->startSection('scripts'); ?>
  <script type="module" src="./src/js/index.js"></script>
  <script src="./src/js/regionsSpain.js"></script>
  <script src="./src/js/hotels.js"></script>
@@ -147,6 +148,7 @@
  <script async defer
  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzhp-gjeksjUKrCvu14fvTA5mAgX8noes&callback=initMap"></script>
  <script src="./src/js/maps.js"></script>
+ <?php $this->stopSection(); ?>
 </body>
 
 </html>

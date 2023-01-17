@@ -23,7 +23,7 @@
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">Our Offers</p>
             <div class="header__links">
-                <a href="./index.html">Home</a>
+                <a href="/index.php">Home</a>
                 <span>|</span>
                 <a class="topbar__nav__anchor__a" href="#">Offers</a>
             </div>
@@ -190,10 +190,11 @@
         @parent
     @endsection
 
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script type="module" src="./src/js/index.js"></script>
-    <script type="module" src="./src/js/slidersRoomOffers.js"></script>
+    @section('scripts')
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script type="module" src="./src/js/index.js"></script>
+        <script type="module" src="./src/js/slidersRoomOffers.js"></script>
+    @endsection
 </body>
 
 </html>
