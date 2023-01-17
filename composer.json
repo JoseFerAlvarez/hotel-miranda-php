@@ -1,5 +1,6 @@
 {
     "require": {
-        "eftec/bladeone": "^4.8"
+        "eftec/bladeone": "^4.8",
+        "vlucas/phpdotenv": "^5.5"
     }
 }
