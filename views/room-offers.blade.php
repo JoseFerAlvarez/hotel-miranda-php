@@ -62,7 +62,8 @@
                         <div class="room-discount__body">
                             <div class="room-discount__body__text">
                                 <p class="text-roboto text-roboto--grey">{{ $room[8] }}</p>
-                                <button class="button button-golden room-discount__body__button">BOOK NOW</button>
+                                <a href="/room-details.php?id={{ $room[0] }}"><button
+                                        class="button button-golden room-discount__body__button">BOOK NOW</button></a>
                             </div>
                             <div class="room-discount__body__facts">
                                 @foreach (explode(',', $room[4]) as $amenitie)

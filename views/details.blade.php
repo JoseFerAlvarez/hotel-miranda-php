@@ -99,7 +99,7 @@
             <div id="map"></div>
             <div class="location-list"></div>
 
-            <form class="details__inputs" action="{{ $sayhello }}" method="POST">
+            <form class="details__inputs" action="{{ $sendMessage }}" method="POST">
                 <div class="details__inputs__group">
                     <div class="details__inputs__column">
                         <div class="input--contact details__input">

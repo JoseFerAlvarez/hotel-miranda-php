@@ -4,10 +4,10 @@ require "vendor/autoload.php";
 use eftec\bladeone\BladeOne;
 $blade = new BladeOne();
 
-echo $blade->run("details", ["sayhello" => decirhola($conn)]);
+echo $blade->run("details", ["sendMessage" => insertContact($conn)]);
 
 
-function decirhola($conn)
+function insertContact($conn)
 {
     $contact = [
         "date" => date("d-m-Y"),
@@ -20,5 +20,7 @@ function decirhola($conn)
     $sql = "INSERT INTO contacts(date, customer, email, phone, header, comment) VALUES ('".$contact["date"]."', '".$contact["customer"]."', '".$contact["email"]."', '".$contact["phone"]."', '".$contact["header"]."', '".$contact["comment"]."');";
 
     $conn->query($sql);
+
+    $conn->close();
 }
 

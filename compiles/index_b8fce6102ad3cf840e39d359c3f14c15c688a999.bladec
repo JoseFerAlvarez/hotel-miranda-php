@@ -22,8 +22,8 @@
  <header class="header">
  <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
  <p class="title header__text__title">The Perfect Base For You</p>
- <button class="button button-golden header__button">TAKE A TOUR</button>
- <button class="button button-dark header__button">LEARN MORE</button>
+ <a href="/room-grid.php"><button class="button button-golden header__button">TAKE A TOUR</button></a>
+ <a href="/about-us.php"><button class="button button-dark header__button">LEARN MORE</button></a>
  </header>
 
  <form class="availability" action="/availability.php" method="POST">
@@ -49,7 +49,8 @@
  do eiusmod tempor incididunt ut
  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
  ut aliquip ex ea commodo consequat.</p>
- <button class="button button-golden about-data__discover__button">BOOK NOW</button>
+ <a href="/room-grid.php"><button class="button button-golden about-data__discover__button">BOOK
+ NOW</button></a>
  </div>
 
  <div class="about-data__card__container">
@@ -141,7 +142,8 @@
  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat you have to understand this.
  </p>
- <button class="button button-golden home-video__button--desktop">BOOK NOW</button>
+ <a href="/room-grid.php"><button class="button button-golden home-video__button--desktop">BOOK
+ NOW</button></a>
  </div>
  <div class="home-video__source">
  <video class="home-video__video" controls>

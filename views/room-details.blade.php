@@ -48,35 +48,37 @@
                     </div>
                 </div>
 
-                <div class="room-details__availability">
+                <form class="room-details__availability" action="{{ $getAvailable }}" method="POST">
                     <p class="room-details__availability__title">Check Availability</p>
                     <p class="room-details__availability__text">Check In</p>
-                    <input class="input input__date--filled" type="date">
+                    <input class="input input__date--filled" type="date" name="checkin">
                     <p class="room-details__availability__text">Check Out</p>
-                    <input class="input input__date--filled" type="date">
-                    <button class="button button-golden">CHECK AVAILABILITY</button>
-                </div>
+                    <input class="input input__date--filled" type="date" name="checkout">
+                    <input type="submit" class="button button-golden" value="CHECK AVAILABILITY"></button>
+                </form>
             </div>
             <p class="text-roboto text-roboto--grey room-details__text">
                 {{ $room[8] }}
             </p>
         </section>
 
-        <section class="room-amenities">
-            <p class="title room-amenities__title">Amenities</p>
-            <hr>
-            <div class="room-amenities__services">
-                @foreach (explode(',', $room[4]) as $amenitie)
-                    @if ($amenitie)
-                        <div class="room-amenities__service">
-                            <img class="room-amenities__service__image"
-                                src="/src/assets/bladeicons/{{ str_replace(' ', '', strtolower($amenitie)) }}.svg">
-                            <p class="room-amenities__service__text">{{ $amenitie }}</p>
-                        </div>
-                    @endif
-                @endforeach
-            </div>
-        </section>
+        @if ($room[4] != '')
+            <section class="room-amenities">
+                <p class="title room-amenities__title">Amenities</p>
+                <hr>
+                <div class="room-amenities__services">
+                    @foreach (explode(',', $room[4]) as $amenitie)
+                        @if ($amenitie)
+                            <div class="room-amenities__service">
+                                <img class="room-amenities__service__image"
+                                    src="/src/assets/bladeicons/{{ str_replace(' ', '', strtolower($amenitie)) }}.svg">
+                                <p class="room-amenities__service__text">{{ $amenitie }}</p>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </section>
+        @endif
 
         <section class="room-founder">
             <div class="room-founder__card">
@@ -168,14 +170,16 @@
                     <a href="/room-details.php?id={{ $room[0] }}">
                         <div class="room room--grid room-related__room">
                             <div class="room__container room__container--grid">
-                                <div class="room__rules room__rules--grid">
-                                    @foreach (explode(',', $room[4]) as $amenitie)
-                                        @if ($amenitie)
-                                            <img class="room__rules__icon"
-                                                src="/src/assets/bladeicons/{{ str_replace(' ', '', strtolower($amenitie)) }}.svg">
-                                        @endif
-                                    @endforeach
-                                </div>
+                                @if ($room[4] != '')
+                                    <div class="room__rules room__rules--grid">
+                                        @foreach (explode(',', $room[4]) as $amenitie)
+                                            @if ($amenitie)
+                                                <img class="room__rules__icon"
+                                                    src="/src/assets/bladeicons/{{ str_replace(' ', '', strtolower($amenitie)) }}.svg">
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                @endif
                                 <div class="room__img room__img--grid"
                                     style="background-image: url('{{ $room[2] }}')">
                                 </div>
