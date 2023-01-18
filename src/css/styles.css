@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Old+Standard+TT&family=Roboto:wght@400;700&display=swap");
+
+a{
+  color: var(--dark-color);
+}
+
 .subtitle {
   font-family: var(--font-archivo);
   font-weight: 700;
