@@ -147,14 +147,14 @@
  </div>
 
  <div class="room-popular__list">
- <?php for($i = 0; $i < 3; $i++): ?>
- <?php echo \htmlentities($number = rand(0, count($popular) - 1)??'', ENT_QUOTES, 'UTF-8', false); ?>
 
+ <?php $__currentLoopData = $popular; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $room): $loop = $this->incrementLoopIndices();  ?>
  <div class="room room--grid room-related__room">
  <div class="room__container room__container--grid">
- <?php if($popular[$number][4] != ''): ?>
+ <?php if($room[4] != ''): ?>
  <div class="room__rules room__rules--grid">
- <?php $__currentLoopData = explode(',', $popular[$number][4]); $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ <?php $__currentLoopData = explode(',', $room[4]); $this->addLoop($__currentLoopData);$this->getFirstLoop();
  foreach($__currentLoopData as $amenitie): $loop = $this->incrementLoopIndices();  ?>
  <?php if($amenitie): ?>
  <img class="room__rules__icon"
@@ -163,25 +163,24 @@
  <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
  </div>
  <?php endif; ?>
- <div class="room__img room__img--grid"
- style="background-image: url('<?php echo \htmlentities($popular[$number][2]??'', ENT_QUOTES, 'UTF-8', false); ?>')">
+ <div class="room__img room__img--grid" style="background-image: url('<?php echo \htmlentities($room[2]??'', ENT_QUOTES, 'UTF-8', false); ?>')">
  </div>
  </div>
  <div class="room__data room__data--grid">
  <div class="room__data__text room__data__text--grid">
  <p class="room__data__text__title room__data__text__title--grid">
- <?php echo \htmlentities($popular[$number][3]??'', ENT_QUOTES, 'UTF-8', false); ?></p>
+ <?php echo \htmlentities($room[3]??'', ENT_QUOTES, 'UTF-8', false); ?></p>
  <p
  class="text-roboto text-roboto--grey
  room__data__text__description room__data__text__description--grid">
- <?php echo \htmlentities($popular[$number][8]??'', ENT_QUOTES, 'UTF-8', false); ?></p>
+ <?php echo \htmlentities($room[8]??'', ENT_QUOTES, 'UTF-8', false); ?></p>
  </div>
  <div class="room__data__properties room__data__properties--grid">
  <p class="room__data__properties__price room__data__properties__price--grid">
- $<?php echo \htmlentities($popular[$number][5] / 100??'', ENT_QUOTES, 'UTF-8', false); ?><span
+ $<?php echo \htmlentities($room[5] / 100??'', ENT_QUOTES, 'UTF-8', false); ?><span
  class="room__data__properties__price__night room__data__properties__price__night--grid">/Night</span>
  </p>
- <?php if($popular[$number][7] = 0): ?>
+ <?php if($room[7] = 0): ?>
  <p class="room__data__properties__availability">Booking Now</p>
  <?php else: ?>
  <p class="room__data__properties__availability">Actually Booked</p>
@@ -189,7 +188,8 @@
  </div>
  </div>
  </div>
- <?php endfor; ?>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+
  </div>
  </section>
  <?php $this->stopSection(); ?>

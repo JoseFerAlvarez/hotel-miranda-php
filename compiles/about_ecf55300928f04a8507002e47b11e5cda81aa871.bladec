@@ -274,9 +274,11 @@
  @parentXYZABC
  <?php $this->stopSection(); ?>
 
+ <?php $this->startSection('scripts'); ?>
  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
  <script type="module" src="./src/js/index.js"></script>
  <script type="module" src="./src/js/slidersAboutUs.js"></script>
+ <?php $this->stopSection(); ?>
 </body>
 
 </html>

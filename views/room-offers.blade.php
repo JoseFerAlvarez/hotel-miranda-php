@@ -141,13 +141,13 @@
             </div>
 
             <div class="room-popular__list">
-                @for ($i = 0; $i < 3; $i++)
-                    {{ $number = rand(0, count($popular) - 1) }}
+
+                @foreach ($popular as $room)
                     <div class="room room--grid room-related__room">
                         <div class="room__container room__container--grid">
-                            @if ($popular[$number][4] != '')
+                            @if ($room[4] != '')
                                 <div class="room__rules room__rules--grid">
-                                    @foreach (explode(',', $popular[$number][4]) as $amenitie)
+                                    @foreach (explode(',', $room[4]) as $amenitie)
                                         @if ($amenitie)
                                             <img class="room__rules__icon"
                                                 src="/src/assets/bladeicons/{{ str_replace(' ', '', strtolower($amenitie)) }}.svg">
@@ -155,25 +155,24 @@
                                     @endforeach
                                 </div>
                             @endif
-                            <div class="room__img room__img--grid"
-                                style="background-image: url('{{ $popular[$number][2] }}')">
+                            <div class="room__img room__img--grid" style="background-image: url('{{ $room[2] }}')">
                             </div>
                         </div>
                         <div class="room__data room__data--grid">
                             <div class="room__data__text room__data__text--grid">
                                 <p class="room__data__text__title room__data__text__title--grid">
-                                    {{ $popular[$number][3] }}</p>
+                                    {{ $room[3] }}</p>
                                 <p
                                     class="text-roboto text-roboto--grey
-                        room__data__text__description room__data__text__description--grid">
-                                    {{ $popular[$number][8] }}</p>
+                    room__data__text__description room__data__text__description--grid">
+                                    {{ $room[8] }}</p>
                             </div>
                             <div class="room__data__properties room__data__properties--grid">
                                 <p class="room__data__properties__price room__data__properties__price--grid">
-                                    ${{ $popular[$number][5] / 100 }}<span
+                                    ${{ $room[5] / 100 }}<span
                                         class="room__data__properties__price__night room__data__properties__price__night--grid">/Night</span>
                                 </p>
-                                @if ($popular[$number][7] = 0)
+                                @if ($room[7] = 0)
                                     <p class="room__data__properties__availability">Booking Now</p>
                                 @else
                                     <p class="room__data__properties__availability">Actually Booked</p>
@@ -181,7 +180,8 @@
                             </div>
                         </div>
                     </div>
-                @endfor
+                @endforeach
+
             </div>
         </section>
     @endsection

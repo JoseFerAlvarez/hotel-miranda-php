@@ -26,19 +26,19 @@
             <button class="button button-dark header__button">LEARN MORE</button>
         </header>
 
-        <section class="availability">
+        <form class="availability" action="/availability.php" method="POST">
             <div class="availability__date__container">
                 <div class="availability__date">
                     <p class="availability__text">Arrival Date</p>
-                    <input class="input input__date--golden availability__input" type="date">
+                    <input class="input input__date--golden availability__input" type="date" name="checkin">
                 </div>
                 <div class="availability__date">
                     <p class="availability__text">LeDeparture Date</p>
-                    <input class="input input__date--golden availability__input" type="date">
+                    <input class="input input__date--golden availability__input" type="date" name="checkout">
                 </div>
             </div>
-            <button class="button button-golden availability__button">CHECK AVAILABILITY</button>
-        </section>
+            <input type="submit" class="button button-golden availability__button" value="CHECK AVAILABILITY">
+        </form>
 
         <section class="about-data">
             <div class="about-data__discover">
@@ -88,14 +88,14 @@
 
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    @for ($i = 0; $i < 3; $i++)
-                        {{ $number = rand(0, count($rooms) - 1) }}
+
+                    @foreach ($rooms as $room)
                         <div class="swiper-slide">
                             <div class="room">
                                 <div class="room__container">
-                                    @if ($rooms[$number][4] != '')
+                                    @if ($room[4] != '')
                                         <div class="room__rules">
-                                            @foreach (explode(',', $rooms[$number][4]) as $amenitie)
+                                            @foreach (explode(',', $room[4]) as $amenitie)
                                                 @if ($amenitie)
                                                     <img class="room__rules__icon"
                                                         src="/src/assets/bladeicons/{{ str_replace(' ', '', strtolower($amenitie)) }}.svg">
@@ -103,23 +103,23 @@
                                             @endforeach
                                         </div>
                                     @endif
-                                    <div class="room__img" style="background-image: url('{{ $rooms[$number][2] }}')">
+                                    <div class="room__img" style="background-image: url('{{ $room[2] }}')">
                                     </div>
                                 </div>
                                 <div class="room__data">
                                     <div class="room__data__text">
-                                        <p class="room__data__text__title">{{ $rooms[$number][3] }}</p>
+                                        <p class="room__data__text__title">{{ $room[3] }}</p>
                                         <p class="text-roboto text-roboto--grey room__data__text__description">
-                                            {{ $rooms[$number][8] }}</p>
+                                            {{ $room[8] }}</p>
                                     </div>
                                     <div class="room__data__properties">
-                                        <p class="room__data__properties__price">${{ $rooms[$number][5] / 100 }}<span
+                                        <p class="room__data__properties__price">${{ $room[5] / 100 }}<span
                                                 class="room__data__properties__price__night">/Night</span></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
 
                 </div>
 
