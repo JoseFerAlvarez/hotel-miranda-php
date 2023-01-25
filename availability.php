@@ -4,7 +4,7 @@ require "vendor/autoload.php";
 use eftec\bladeone\BladeOne;
 $blade = new BladeOne();
 
-if ($_POST["checkin"] && $_POST["checkout"]) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $checkin = explode("-", $_POST["checkin"]);
     $checkout = explode("-", $_POST["checkout"]);
     $checkin = $checkin[2] . "/" . $checkin[1] . "/" . $checkin[0];

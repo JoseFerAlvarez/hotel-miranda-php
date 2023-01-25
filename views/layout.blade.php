@@ -39,10 +39,6 @@
                         </li>
                     </ul>
                 </div>
-                <div class="topbar__container__buttons">
-                    <button class="icon-button"><img src="./src/assets/icons/user.svg"></button>
-                    <button class="icon-button"><img src="./src/assets/icons/search.svg"></button>
-                </div>
             </div>
             <div class="topbar__nav">
                 <ul class="topbar__nav__list">
@@ -63,25 +59,7 @@
         <div class="header__back"></div>
     @show
 
-    @section('index-content')
-    @show
-
-    @section('about-content')
-    @show
-
-    @section('room-grid-content')
-    @show
-
-    @section('room-list-content')
-    @show
-
-    @section('room-details-content')
-    @show
-
-    @section('room-offers-content')
-    @show
-
-    @section('details-content')
+    @section('content')
     @show
 
     @section('footer')

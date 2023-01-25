@@ -18,7 +18,7 @@
         @parent
     @endsection
 
-    @section('details-content')
+    @section('content')
         <header class="header">
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">New Details</p>
@@ -99,7 +99,7 @@
             <div id="map"></div>
             <div class="location-list"></div>
 
-            <form class="details__inputs" action="{{ $sendMessage }}" method="POST">
+            <form class="details__inputs" action="/details.php" method="POST">
                 <div class="details__inputs__group">
                     <div class="details__inputs__column">
                         <div class="input--contact details__input">

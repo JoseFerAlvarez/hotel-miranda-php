@@ -1632,6 +1632,18 @@ a{
   font-size: 1.15rem;
   text-align: center;
 }
+.room-details__availability__available,
+.room-details__availability__booked{
+  margin-top: 30px;
+}
+
+.room-details__availability__available{
+  color: #5AD07A;
+}
+.room-details__availability__booked{
+  color: #E23428;
+}
+
 .room-details__availability__text {
   font-family: var(--font-archivo);
   font-weight: 700;

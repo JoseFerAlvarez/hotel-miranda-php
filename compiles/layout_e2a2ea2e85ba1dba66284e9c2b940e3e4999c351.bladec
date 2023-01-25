@@ -39,10 +39,6 @@
  </li>
  </ul>
  </div>
- <div class="topbar__container__buttons">
- <button class="icon-button"><img src="./src/assets/icons/user.svg"></button>
- <button class="icon-button"><img src="./src/assets/icons/search.svg"></button>
- </div>
  </div>
  <div class="topbar__nav">
  <ul class="topbar__nav__list">
@@ -63,25 +59,7 @@
  <div class="header__back"></div>
  <?php echo $this->yieldSection(); ?>
 
- <?php $this->startSection('index-content'); ?>
- <?php echo $this->yieldSection(); ?>
-
- <?php $this->startSection('about-content'); ?>
- <?php echo $this->yieldSection(); ?>
-
- <?php $this->startSection('room-grid-content'); ?>
- <?php echo $this->yieldSection(); ?>
-
- <?php $this->startSection('room-list-content'); ?>
- <?php echo $this->yieldSection(); ?>
-
- <?php $this->startSection('room-details-content'); ?>
- <?php echo $this->yieldSection(); ?>
-
- <?php $this->startSection('room-offers-content'); ?>
- <?php echo $this->yieldSection(); ?>
-
- <?php $this->startSection('details-content'); ?>
+ <?php $this->startSection('content'); ?>
  <?php echo $this->yieldSection(); ?>
 
  <?php $this->startSection('footer'); ?>

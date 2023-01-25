@@ -18,7 +18,7 @@
         @parent
     @endsection
 
-    @section('room-details-content')
+    @section('content')
         <header class="header">
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">Ultimate Room</p>
@@ -48,13 +48,21 @@
                     </div>
                 </div>
 
-                <form class="room-details__availability" action="{{ $getAvailable }}" method="POST">
+                <form class="room-details__availability" action="/room-details.php?id={{ $room[0] }}" method="POST">
                     <p class="room-details__availability__title">Check Availability</p>
                     <p class="room-details__availability__text">Check In</p>
                     <input class="input input__date--filled" type="date" name="checkin">
                     <p class="room-details__availability__text">Check Out</p>
                     <input class="input input__date--filled" type="date" name="checkout">
                     <input type="submit" class="button button-golden" value="CHECK AVAILABILITY"></button>
+                    @if ($available)
+                        @if ($available == 1)
+                            <p class="room-details__availability__title room-details__availability__available">Room
+                                available</p>
+                        @else
+                            <p class="room-details__availability__title room-details__availability__booked">Room booked</p>
+                        @endif
+                    @endif
                 </form>
             </div>
             <p class="text-roboto text-roboto--grey room-details__text">

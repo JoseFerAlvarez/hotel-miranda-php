@@ -18,7 +18,7 @@
  @parentXYZABC
  <?php $this->stopSection(); ?>
 
- <?php $this->startSection('room-grid-content'); ?>
+ <?php $this->startSection('content'); ?>
  <header class="header">
  <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
  <p class="title header__text__title">Ultimate Room</p>

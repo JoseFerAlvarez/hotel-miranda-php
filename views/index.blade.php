@@ -18,7 +18,7 @@
         @parent
     @endsection
 
-    @section('index-content')
+    @section('content')
         <header class="header">
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">The Perfect Base For You</p>

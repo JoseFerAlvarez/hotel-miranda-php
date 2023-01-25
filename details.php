@@ -4,11 +4,7 @@ require "vendor/autoload.php";
 use eftec\bladeone\BladeOne;
 $blade = new BladeOne();
 
-echo $blade->run("details", ["sendMessage" => insertContact($conn)]);
-
-
-function insertContact($conn)
-{
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contact = [
         "date" => date("d-m-Y"),
         "customer" => $_POST["customer"],
@@ -23,4 +19,7 @@ function insertContact($conn)
 
     $conn->close();
 }
+
+echo $blade->run("details");
+
 
