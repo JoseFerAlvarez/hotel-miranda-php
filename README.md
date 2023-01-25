@@ -30,6 +30,17 @@ git clone https://github.com/JoseFerAlvarez/hotel-miranda-php.git
 
 - Install [BladeOne](https://github.com/EFTEC/BladeOne).
 
+- Create .env with database variables.
+
+```javascript
+DB_SERVERNAME=yourserver
+DB_USERNAME=youruser
+DB_PASSWORD=yourpassword
+DB_NAME=yourdatabase
+```
+
+- Seed tables and rows from this [repository](https://github.com/JoseFerAlvarez/hotel-miranda-mysql-seed).
+
 - Open PHP Server.
 
 ```bash
