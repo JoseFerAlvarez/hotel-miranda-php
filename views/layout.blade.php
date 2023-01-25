@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
         <link href="/src/css/styles.css" rel="stylesheet">
-        <title>Document</title>
+        <title>Hotel Miranda</title>
     @show
 </head>
 
