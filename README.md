@@ -30,7 +30,7 @@ git clone https://github.com/JoseFerAlvarez/hotel-miranda-php.git
 
 - Install [BladeOne](https://github.com/EFTEC/BladeOne).
 
-- Create .env with database variables.
+- Create .env with database variables in /src/db.
 
 ```javascript
 DB_SERVERNAME=yourserver
